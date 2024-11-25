@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --primary-400: hsl(4, 100%, 67%);
+
+  --neutral-400: hsl(234, 29%, 20%);
+--neutral-300: hsl(235, 18%, 26%);
+--neutral-200: hsl(231, 7%, 60%);
+--neutral-100: hsl(0, 0%, 100%);
+
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.panel{
+
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background-color: var(--neutral-100);
+  color: var(--neutral-300);
+}
+
+.form-container{
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+
+}
+.img{
+  background-image: url(./assets/illustration-sign-up-mobile.svg);
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.form-content{
+  padding-inline: 1.2rem;
+  margin-block: 2rem;
+
+}
+.form-content{
+  margin-bottom: 1rem;
+  front-weight: 500;
+
+}
+ul{
+  margin-bottom: 2rem;
+
+}
+li{
+  fornt-weight: 500;
+  list-style: none;
+}
+
+li::before{
+  content: url(./assets/icon-list.svg);
+  position: relative;
+  top:  0.3rem;
+  margin-right: 0.5rem;
+}
+
+li:not(:last-child){
+  margin-bottom: 0.5rem;
+}
+
+label{
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+input,
+button{
+  width: 100%;
+  font-family: inherit;
+  border-radius: 0.4rem;
+
+}
+
+input{
+  border: 1px solid var(--neutral-300);
+  height: 43px;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+
+}
+
+button{
+  background-color: var(--neutral-400);
+  color: var(--neutral-100);
+  border:none;
+  padding-block: 1rem;
+  font-size: 1rem;
+}
+
+/* success */
+.message{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+@media (min-width: 768px){
+  body{
+    background-color: var(--neutral-400);
+  }
+  .panel{
+    background-color: transparent;
+  }
+  .img{
+    background-image: url(./assets/illustration-sign-up-desktop.svg);
+    height: 100%;
+    width: 500px;
+    border-radius: 1rem;
+  }
+  .form-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    background-color: var(--neutral-100);
+    height: 90%;
+    border-radius: 1rem;
+    padding: 1rem;
+
+  }
+}
